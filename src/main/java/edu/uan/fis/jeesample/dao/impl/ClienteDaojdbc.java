@@ -172,9 +172,9 @@ public class ClienteDaojdbc implements ClienteDao {
             List<Cliente> clientes = new ArrayList<Cliente>();
 
         try {
-            // 1. Register the JDBC driver
+           
             Class.forName("com.mysql.jdbc.Driver");
-            // 2. Get the connection for the URL jdbc:mysql://address:port/dbname?user=username&password=userpassword
+            
             conn = DriverManager.getConnection("jdbc:mysql://localhost/electiva1" , "root", "123456");
             String updateTableSQL = "SELECT * FROM tbl_cliente";
             stmt = conn.prepareStatement(updateTableSQL);

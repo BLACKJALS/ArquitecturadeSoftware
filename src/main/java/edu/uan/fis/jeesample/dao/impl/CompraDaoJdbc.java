@@ -175,13 +175,13 @@ public class CompraDaoJdbc implements CompraDao{
             List<Compra> compra = new ArrayList<Compra>();
 
         try {
-            // 1. Register the JDBC driver
+           
             Class.forName("com.mysql.jdbc.Driver");
-            // 2. Get the connection for the URL jdbc:mysql://address:port/dbname?user=username&password=userpassword
+           
             conn = DriverManager.getConnection("jdbc:mysql://localhost/electiva1" , "root", "123456");
             String updateTableSQL = "SELECT * FROM tbl_cliente";
             stmt = conn.prepareStatement(updateTableSQL);
-            // 3. actualizar cliente en la base de datos
+           
             
             PreparedStatement preparedStatement = conn.prepareStatement(updateTableSQL);
             preparedStatement.executeQuery();
@@ -207,7 +207,7 @@ public class CompraDaoJdbc implements CompraDao{
              System.out.println(" USUARIO: "+usuario+" ID_PRODUCT: "+idproduct+" ID_COMPRA: "+idcompra);
                  
             }
-            //stmt.executeUpdate("INSERT INTO tbl_cliente VALUES(" + cliente.getClienteId() + ",'" + cliente.getName() + "')");
+            
         } catch (SQLException ex) {
             Logger.getLogger(ClienteDaojdbc.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {

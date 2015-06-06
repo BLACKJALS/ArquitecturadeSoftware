@@ -236,7 +236,7 @@ public class ProductDaoJdbc implements ProductDao {
              System.out.println(" ID_PRODUCT: "+idproduct+" NOMBRE: "+nombre+"PRECIO"+precio);
                  
             }
-            //stmt.executeUpdate("INSERT INTO tbl_cliente VALUES(" + cliente.getClienteId() + ",'" + cliente.getName() + "')");
+            
         } catch (SQLException ex) {
             Logger.getLogger(ClienteDaojdbc.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {

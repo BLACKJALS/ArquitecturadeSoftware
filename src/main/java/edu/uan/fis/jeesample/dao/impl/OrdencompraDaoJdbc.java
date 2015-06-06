@@ -143,7 +143,7 @@ public class OrdencompraDaoJdbc implements OrdencompraDao {
             PreparedStatement preparedStatement = conn.prepareStatement(updateTableSQL);
             
             preparedStatement.setInt(1, 3);
-// execute insert SQL stetement
+
             rs=preparedStatement.executeQuery();
             while (rs.next())
             {
@@ -222,7 +222,7 @@ public class OrdencompraDaoJdbc implements OrdencompraDao {
              System.out.println(" USUARIO: "+usuario+" ID_ORDEN: "+idorden);
                  
             }
-            //stmt.executeUpdate("INSERT INTO tbl_cliente VALUES(" + cliente.getClienteId() + ",'" + cliente.getName() + "')");
+            
         } catch (SQLException ex) {
             Logger.getLogger(ClienteDaojdbc.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
